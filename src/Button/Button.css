@@ -1,0 +1,26 @@
+.taskRow-container-button{
+    font-size: 20px;
+    border-radius: 10%;
+    border: 0;
+    height: 100%;
+    width: 49%;
+    background-color: rgb(62, 77, 192);
+    cursor: pointer;
+    font-size: 17px;
+}
+
+.button-beenDone{
+    background-color: green;
+}
+
+.button-delete{
+    background-color: red;
+}
+
+.button-beenDone:active{
+    background-color: rgb(2, 158, 2);
+}
+
+.button-delete:active{
+    background-color: rgb(210, 0, 0);
+}

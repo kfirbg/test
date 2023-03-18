@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import TaskRow from "./TaskRow/TaskRow";
+import AddTask from "./AddTask/AddTask";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [newTask, setNewTask] = useState([]);
+  useEffect(() => {
+    console.log(newTask);
+  }, [newTask]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 className="App-title">Todo List</h1>
+      <AddTask setNewTask={setNewTask} newTask={newTask}></AddTask>
+      {/* {console.log("newTask:" + newTask)} */}
+      {newTask.map((newTask, index) => (
+        <TaskRow>{newTask}</TaskRow>
+      ))}
     </div>
   );
 }

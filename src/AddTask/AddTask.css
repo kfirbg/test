@@ -1,0 +1,19 @@
+.AddTask{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding-bottom: 10px;
+
+    
+}
+
+.AddTask-input{
+    width: 72%;
+    font-size: 15px;
+    padding: 0 3px 0 3px;
+    height: 25px;
+    border: solid 1px;
+}
+
