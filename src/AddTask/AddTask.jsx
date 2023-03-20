@@ -4,7 +4,6 @@ import Options from "../Options.json";
 import Button from "../Button/Button";
 
 const AddTask = ({ newTask, setNewTask, children }) => {
-  const arrTask = newTask;
   let task = "";
   const onSetTask = (e) => {
     task = e.target.value;
@@ -12,9 +11,7 @@ const AddTask = ({ newTask, setNewTask, children }) => {
 
   const onCreateTask = () => {
     if (task !== "") {
-      arrTask.push(task);
-      setNewTask(arrTask);
-      // console.log(newTask);
+      setNewTask([...newTask, task]);
     }
   };
 
